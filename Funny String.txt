@@ -1,0 +1,16 @@
+public static String funnyString(String s) {
+        List<Integer> normalList = new ArrayList<Integer>();
+        List<Integer> reverseList = new ArrayList<Integer>();
+        
+        for(int i = 0; i < s.length() - 1; i++){
+            normalList.add(Math.abs(s.charAt(i) - s.charAt(i + 1)));
+        }
+        StringBuilder r = new StringBuilder(s);
+        r.reverse();
+        
+        for(int i = 0; i < r.length() - 1; i++){
+            reverseList.add(Math.abs(r.charAt(i) - r.charAt(i + 1)));
+        }
+        return (normalList.equals(reverseList)) ?
+            "Funny" : "Not Funny";
+    }

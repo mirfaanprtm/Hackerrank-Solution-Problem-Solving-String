@@ -1,0 +1,20 @@
+public static String pangrams(String s) {
+        String pangram = "pangram";
+        boolean isPangram = true;
+        char x = 'A';
+        char y = 'a';
+        
+        for (int i = 0; i < 26; i++){
+            if(!s.contains(Character.toString(x))){
+                if(!s.contains(Character.toString(y))){
+                    isPangram = false;
+                }
+            }
+            x += 1;
+            y += 1;
+        }
+        if(!isPangram){
+            pangram = "not pangram";
+        }
+        return pangram;
+}

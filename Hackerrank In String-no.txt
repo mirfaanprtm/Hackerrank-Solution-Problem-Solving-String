@@ -1,0 +1,15 @@
+
+
+public static String hackerrankInString(String s) {
+        List<Character> selector = new ArrayList<Character>(
+            Arrays.asList('h', 'a', 'c', 'k', 'e', 'r',
+                'r', 'a', 'n', 'k'));
+        
+        for(int j = 0;j < s.length(); j++){
+            if(s.charAt(j) == selector.get(0)){
+                selector.remove(0);
+            }
+            if (selector.size() == 0) break;
+        }
+        return (selector.size() == 0) ? "YES" : "NO";
+    } 

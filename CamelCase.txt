@@ -1,0 +1,10 @@
+public static int camelcase(String s) {
+    int count = 0;
+    for(int i = 0; i < s.length(); i++){
+        if(Character.isUpperCase(s.charAt(i))){
+            count += 1;
+        }
+    }
+    return count+1;
+
+    }
